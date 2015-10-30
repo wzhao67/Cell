@@ -29,9 +29,9 @@ def start():
 def wake_up():
     print '''
     You wake up feeling dizzy. What happened? You think to yourself. The past few days are a blur. 
-        \nPlaying ping pong with alcohol...
-        \nNaming plastic cups after royalty...
-        \nWatching too much Netflix...'''
+    \n  Playing ping pong with alcohol...
+    \n  Naming plastic cups after royalty...
+    \n  Watching too much Netflix...'''
     print
 
     while(1):
@@ -50,7 +50,7 @@ def wake_up():
 def sit_up():
     print '''
     "Where am I?" you talk out loud, because that's the normal thing to do.\n
-    "You will find out in due time," says a cool, feminine voice.\n
+    "You will find out in due time," says a cool, female voice.\n
     You start and jump to your feet. '''
     counter = 0
     
@@ -63,13 +63,13 @@ def sit_up():
         
         if "who" in prompt:
             print '''
-        My name is Em. I am the computer control unit of Biotom, a highly advanced transportation device
+        "My name is Em. I am the computer control unit of Biotom, a highly advanced transportation device
         designed to enter biological systems. Biotom was designed to perform medical operations at the cellular
         level. I am its companion, and you are mine." '''
             look_around()
         elif "where" in prompt:
             print '''
-        We are inside the Biotom, a highly advanced transportation device
+        "We are inside the Biotom, a highly advanced transportation device
         designed to enter biological systems. Biotom was designed to perform 
         medical operations at the cellular level. 
         My name is Em. I am Biotom's computer control unit." 
@@ -96,7 +96,7 @@ def look_around():
     print '''
     You try to absorb the information. \n
     You try to bend your head around it. \n
-    So...\n You're in some sort of spaceship...but not in space...and it's really tiny?\n
+    So...\n     You're in some sort of spaceship...but not in space...and it's really tiny?\n
     Just then the lights come on and the ship roars to life. 
     You see a series of controls and blinking lights around you.
     Before you lies a large window, looking towards the outside of the ship.     
@@ -111,13 +111,48 @@ def look_around():
         You decide to go to bed like a good college student.\n
         But you eventually wake up. \n
         Everybody does. \n
-        You look outside\n'''
+        You look outside...\n'''
             mission()
         else:
             print ("Unfortunately there are only two things that you can/will do...")
 
 def mission():
-    print "Coming soon!"
+    print '''
+    Outside the Biotom's front window, \
+    you see a large, gelatinous surface embedded with globulous objects. \
+    A flurry of activiy is going on on the surface. \
+    Things were flying across it to the other side. \
+    Other objects are coming out of it. 
+    
+    '''
+    while(1):
+        prompt = raw_input('''Will you "rub your eyes" or "ask Em what it is"?\
+        If you know what this gooey surface is, let Em know. \n''')
+        prompt = prompt.lower()
+        if "rub" in prompt or "eye" in prompt:
+            print '''
+            "You are not dreaming," says Em. "Do you know what this is?"
+            '''
+        elif "ask" in prompt or "what" in prompt:
+            print '''
+        "This is the cell membrane," Em says matter-of-factly. 
+        "You must be wondering why we are here. We are to infiltrate this cell and \
+        replace a faulty gene in the nucleus. It goes without saying that you must \
+        complete this mission without dying."
+        '''
+            get_ions()
+        elif "membrane" in prompt:
+            print '''
+            "Correct," says Em. "I am glad you are so smart. \
+            It reduces the probability of you dying. \
+            You must be wondering why we are here. We are to infiltrate this cell and \
+            replace a faulty gene in the nucleus.
+            '''
+            get_ions()
+        else:
+            print ("You don't feel like doing that...")
+
+def startstartget_ions():
     sys.exit()
 
 start()
